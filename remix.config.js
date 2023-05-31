@@ -5,11 +5,6 @@ module.exports = {
   watchPaths: ['./public'],
   server:
     process.env.NODE_ENV === 'development' ? './server-dev.ts' : './server.ts',
-  /**
-   * The following settings are required to deploy Hydrogen apps to Oxygen:
-   */
-  publicPath: (process.env.HYDROGEN_ASSET_BASE_URL ?? '/') + 'build/',
-  assetsBuildDirectory: 'dist/client/build',
   serverPlatform: 'neutral',
   serverModuleFormat: 'esm',
   serverConditions: ['worker', process.env.NODE_ENV],
